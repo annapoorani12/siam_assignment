@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Start of Tabs -->
+<div class="header">
+    <div class="tab-frame">
+        <input type="radio" checked name="tab" id="tab1">
+        <label for="tab1">Heading</label>
+          
+        <input type="radio" name="tab" id="tab2">
+        <label for="tab2">Sidebar</label>
+        
+        <input type="radio" name="tab" id="tab3">
+        <label for="tab3">Main Body</label>
+       
+        <div class="tab">
+            <div class="grid-container text">
+              
+                <div class="grid-item"><input type='color' name="base" class="color" /><span>Background color</span></div>
+                <div class="grid-item"><input type='color' name="name_txt" class="color" /><span>Your name</span></div>
+                <div class="grid-item"><input type='color' name="btn" class="color" /><span>Contact button color</span></div>
+                <div class="grid-item"><input type='color' name="menu_text" class="color"  /><span>Menu text color</span></div>
+                <div class="grid-item"><input type='color' class="color" /><span>Designation</span></div>
+                <div class="grid-item"><input type='color' name="btn_text" class="color" /><span>Contact button text color</span></div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="grid-container">
+                <div class="grid-item"><input type='color' class="color" name="btn_color"  /><span>Get In Touch button color</span></div>
+                <div class="grid-item"><input type='color'class="color"  name ="website_btn_color"/><span>Website Button color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="phone_color"  /><span>Phone color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="get_txt_color" /><span>Get In Touch text color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="website_txt_color" /><span>Website Button text color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="sidebar" /><span>Sidebarcolor</span></div>
+            </div>
+        </div>
+        <div class="tab">
+            <div class="grid-container">
+                <div class="grid-item"><input type='color' class="color" name="profile_bg" /><span>Profile Background color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="profile_btn" /><span>Profile button color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="hyperlink_color"/><span>Hyperlink color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="profile_txt" /><span>Profile text color</span></div>
+                <div class="grid-item"><input type='color' class="color" name="profile_btn_text"/><span>Profile button text color</span></div>
+            </div>
+        </div>
+      </div>
+  </div>
+<!-- End of Tabs -->
+<!-- Start of Navbar -->
+<div class="topnav">
+ <a href=""><img src="avatar.png" class="avatar"></img></a>
+  <a href="#" class="yourname_color_change">Your Name
+      <span>
+  </a>
+  <a class="menu_color" href="#" style="float:right;">Get in Touch</a>
+  <a class="menu_color" href="#" style="float:right;">Home</a>
+  <a href="#" style="float:right"><button class="nav_button">Contact me</button></a>
+</div>
+<!-- End of Navbar -->
+<!-- Start of Content -->
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>There are many variation of Passages</h2>
+      <p><a href="#" class="href_color">There are many variation of Passages</a>. There are many variation of PassagesLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <div class="card-content" style="height:300px;">
+            <div class="card_content_left">
+                <img src="avatar.png" class="card_content_image"> 
+            </div>
+            <div class="card_content_right">
+                <h3>Contrary to Popular Belief</h3>
+                <p class="profile_text_color">Contrary to popular belief.Lorem ipsum dolor sit amet, consectetur adipiscing elit, Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <button class="send_button">Send it to Me!</button>
+            </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of content -->
+  <!-- Start of Sidebar -->
+  <div class="rightcolumn">
+    <div class="card">
+      <div class="" >
+        <img src="avatar.png" class="avatar-about"> 
+     </div>
+      <p>
+          <ul class="about-detail">
+              <p>Your Name</p>
+              <p>Company Name</p>
+              <p>Designation</p>
+              <h3 class="phone-number">123-234-2112</h3>
+              <button class="button get_in_touch_button">Get in Touch</button>
+              <button class="button get_in_touch_button website_btn">Visit Website</button>
+          </ul>
+      </p>
+    </div>
+  </div>
+  <!-- End of Sidebar -->
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+const inputs =document.querySelectorAll('.grid-item input');
+function handleUpdate() {
+  document.documentElement.style.setProperty(`--${this.name}`, this.value );
+    }
+
+inputs.forEach(input => input.addEventListener('change', handleUpdate));
+    inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));  
+    </script>
+</body>
+</html>
